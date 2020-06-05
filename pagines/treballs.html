@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/estil.css">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>Portafoli</title>
+</head>
+<body>
+   <div class="container">
+    <div class="container0">
+   <h1 class="titols">Portafoli</h1>
+   </div>
+    <div class="container1">
+        <div class="botton"><a href="../index.html">Inici</a></div>
+      <div class="botton"><a href="curriculum.html">Curriculum</a></div>
+        <div class="botton activa">Treballs</div>
+        <div class="botton"><a href="contacte.html">Contacte</a></div>
+      </div>
+           <div class="container2">
+            <div class="container-display">
+            <img class="mySlides" src="../imgs/imatgep1.jpg" style="width:100%">
+            <img class="mySlides" src="../imgs/imatgep2.JPG" style="width:100%">
+            <img class="mySlides" src="../imgs/imatgep3.JPG" style="width:100%">
+            <img class="mySlides" src="../imgs/titella.JPG" style="width:100%">
+            
+
+            <button class="boton-slider fletxaDreta-slider" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+      <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+        </div>
+         </div>
+</body>
+</html>
